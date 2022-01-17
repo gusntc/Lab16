@@ -15,5 +15,22 @@ int main(){
 	    cout << a << " " << b << " " << c << " " << d << "\n";
 	}
 	
+	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int x[]={a,b,c,d};
+	int N = sizeof(x)/sizeof(x[0]);
+	for(int i=N-1;i>=0;i--){
+		int j = rand()%(i+1);
+		int t = x[i];
+		x[i]=x[j];
+		x[j]=t;
+		a = x[0];
+		b = x[1];
+		c = x[2];
+		d = x[3];
+	}
+}
+	
